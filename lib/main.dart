@@ -21,7 +21,7 @@ class TaskManagerApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Builder(
-  builder: (context) => TaskListScreen(),
+  builder: (context) => const TaskListScreen(),
 ),
     );
   }

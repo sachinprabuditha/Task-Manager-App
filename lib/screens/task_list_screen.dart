@@ -6,7 +6,10 @@ import 'add_edit_task_screen.dart';
 import 'task_details_screen.dart';
 
 class TaskListScreen extends ConsumerStatefulWidget {
+  const TaskListScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _TaskListScreenState createState() => _TaskListScreenState();
 }
 
@@ -154,12 +157,12 @@ class _TaskListScreenState extends ConsumerState<TaskListScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if (task.description != null) Text(task.description!),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   'Due: ${task.dueDate.toLocal().toString().split(' ')[0]}',
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                  style: const TextStyle(fontSize: 12, color: Colors.grey),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   'Priority: ${task.priority}',
                   style: TextStyle(
@@ -185,7 +188,7 @@ class _TaskListScreenState extends ConsumerState<TaskListScreen> {
               );
             },
             trailing: IconButton(
-              icon: Icon(Icons.delete, color: Colors.red),
+              icon: const Icon(Icons.delete, color: Colors.red),
               onPressed: () {
                 ref.read(tasksProvider.notifier).deleteTask(
                   ref.watch(tasksProvider).indexOf(task),

@@ -8,16 +8,16 @@ class TaskDetailsScreen extends ConsumerWidget {
   final int index;
   final Task task;
 
-  TaskDetailsScreen({required this.index, required this.task});
+  const TaskDetailsScreen({super.key, required this.index, required this.task});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Task Details'),
+        title: const Text('Task Details'),
         actions: [
           IconButton(
-            icon: Icon(Icons.delete, color: Colors.red),
+            icon: const Icon(Icons.delete, color: Colors.red),
             onPressed: () {
               ref.read(tasksProvider.notifier).deleteTask(index);
               Navigator.pop(context);
@@ -33,17 +33,17 @@ class TaskDetailsScreen extends ConsumerWidget {
             // Title and Description
             _buildTitleDescriptionSection(),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Priority and Status Section
             _buildPriorityStatusSection(),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Due Date
             _buildDueDateSection(),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Edit Button
             _buildEditButton(context),
@@ -64,16 +64,16 @@ class TaskDetailsScreen extends ConsumerWidget {
           children: [
             Text(
               'Title: ${task.title}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'Description: ${task.description ?? 'No description'}',
-              style: TextStyle(fontSize: 16, color: Colors.black54),
+              style: const TextStyle(fontSize: 16, color: Colors.black54),
             ),
           ],
         ),
@@ -97,10 +97,10 @@ class TaskDetailsScreen extends ConsumerWidget {
                   color: _getPriorityColor(task.priority),
                   size: 28,
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Text(
                   'Priority: ${task.priority}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                     color: Colors.black87,
@@ -108,7 +108,7 @@ class TaskDetailsScreen extends ConsumerWidget {
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               children: [
                 Icon(
@@ -116,10 +116,10 @@ class TaskDetailsScreen extends ConsumerWidget {
                   color: task.isCompleted ? Colors.green : Colors.grey,
                   size: 28,
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Text(
                   'Status: ${task.isCompleted ? 'Completed' : 'Pending'}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                     color: Colors.black87,
@@ -141,15 +141,15 @@ class TaskDetailsScreen extends ConsumerWidget {
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
-            Icon(
+            const Icon(
               Icons.calendar_today,
               color: Colors.blue,
               size: 28,
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Text(
               'Due Date: ${task.dueDate.toLocal().toString().split(' ')[0]}', // Format the date to show only the date part
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
                 color: Colors.black87,
@@ -165,7 +165,7 @@ class TaskDetailsScreen extends ConsumerWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.blueAccent,
-        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
@@ -178,7 +178,7 @@ class TaskDetailsScreen extends ConsumerWidget {
           ),
         );
       },
-      child: Text(
+      child: const Text(
         'Edit Task',
         style: TextStyle(fontSize: 18, color: Colors.white),
       ),

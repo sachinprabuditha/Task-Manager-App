@@ -7,7 +7,7 @@ class AddEditTaskScreen extends ConsumerWidget {
   final int? index;
   final Task? task;
 
-  AddEditTaskScreen({this.index, this.task});
+  AddEditTaskScreen({super.key, this.index, this.task});
 
   final _formKey = GlobalKey<FormState>();
   final _titleController = TextEditingController();
@@ -42,7 +42,7 @@ class AddEditTaskScreen extends ConsumerWidget {
                 validator: (value) => value == null || value.isEmpty ? 'Title is required' : null,
               ),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               // Description Field
               _buildTextField(
@@ -51,17 +51,17 @@ class AddEditTaskScreen extends ConsumerWidget {
                 maxLines: 3,
               ),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               // Priority Dropdown
               _buildPriorityDropdown(),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               // Due Date Field
               _buildDueDateField(),
 
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
 
               // Save Button
               _buildSaveButton(context, ref),
@@ -87,8 +87,8 @@ class AddEditTaskScreen extends ConsumerWidget {
           controller: controller,
           decoration: InputDecoration(
             labelText: label,
-            border: OutlineInputBorder(),
-            contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+            border: const OutlineInputBorder(),
+            contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
           ),
           validator: validator,
           maxLines: maxLines,
@@ -108,7 +108,7 @@ class AddEditTaskScreen extends ConsumerWidget {
           builder: (context, value, _) {
             return DropdownButtonFormField<String>(
               value: value,
-              items: [
+              items: const [
                 DropdownMenuItem(value: 'Low', child: Text('Low')),
                 DropdownMenuItem(value: 'Medium', child: Text('Medium')),
                 DropdownMenuItem(value: 'High', child: Text('High')),
@@ -116,7 +116,7 @@ class AddEditTaskScreen extends ConsumerWidget {
               onChanged: (newValue) {
                 _priority.value = newValue!;
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Priority',
                 border: OutlineInputBorder(),
               ),
@@ -137,7 +137,7 @@ class AddEditTaskScreen extends ConsumerWidget {
           valueListenable: _dueDate,
           builder: (context, value, _) {
             return TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Due Date',
                 border: OutlineInputBorder(),
                 suffixIcon: Icon(Icons.calendar_today),
@@ -166,7 +166,7 @@ class AddEditTaskScreen extends ConsumerWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.blueAccent,
-        padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
@@ -189,7 +189,7 @@ class AddEditTaskScreen extends ConsumerWidget {
           Navigator.pop(context);
         }
       },
-      child: Text(
+      child: const Text(
         'Save Task',
         style: TextStyle(fontSize: 18, color: Colors.white),
       ),
