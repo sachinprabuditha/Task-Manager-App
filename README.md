@@ -34,7 +34,7 @@ cd task_manager_app <br><br>
 **Step 2: Install Dependencies** <br>
 Make sure you have Flutter installed. Then, run the following command to install the necessary dependencies:<br><br>
 
-flutter pub get<br>
+> flutter pub get<br>
 This will fetch all the required packages, including flutter_riverpod, hive_flutter, and other dependencies.<br><br>
 
 **Step 3: Configure Hive**<br>
@@ -46,14 +46,14 @@ Register Hive adapters (done in the code automatically).<br><br>
 **Step 4: Run the App** <br>
 To run the app, make sure you have an emulator or a connected device. Then, execute the following command:<br><br>
 
-flutter run<br>
+> flutter run<br>
 This will compile and launch the app on your chosen device or simulator.<br><br>
 
 # **Troubleshooting**<br>
 Error: HiveAdapter not defined<br>
 If you encounter the error about TaskAdapter being undefined, ensure you've run the build runner command to generate the necessary Hive adapter code:<br><br>
 
->flutter packages pub run build_runner build<br>
+> flutter packages pub run build_runner build<br>
 This will generate the required .g.dart files for Hive.<br><br>
 
 Error: NoSuchMethodError on copyWith<br>
