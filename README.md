@@ -1,7 +1,7 @@
-#Task Manager App
+##Task Manager App
 A simple task management app built with Flutter, using Riverpod for state management and Hive for local storage. The app allows users to create, edit, delete tasks, filter them by title or description, and track progress with the ability to mark tasks as completed.
 
-#Features
+##Features
 Add, edit, delete tasks.
 Filter tasks by title or description.
 Mark tasks as completed.
