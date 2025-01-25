@@ -31,21 +31,21 @@ Clone this repository to your local machine using the following command:<br>
 git clone https://github.com/sachinprabuditha/Task-Manager-App.git <br>
 cd task_manager_app <br><br>
 
-#Step 2: Install Dependencies
-Make sure you have Flutter installed. Then, run the following command to install the necessary dependencies:
+**Step 2: Install Dependencies** <br>
+Make sure you have Flutter installed. Then, run the following command to install the necessary dependencies:<br><br>
 
-flutter pub get
-This will fetch all the required packages, including flutter_riverpod, hive_flutter, and other dependencies.
+flutter pub get<br>
+This will fetch all the required packages, including flutter_riverpod, hive_flutter, and other dependencies.<br><br>
 
-#Step 3: Configure Hive
-Ensure that you have configured Hive for local storage.
+**Step 3: Configure Hive**<br>
+Ensure that you have configured Hive for local storage.<br><br>
 
-Add the hive and hive_flutter dependencies to your pubspec.yaml file.
-Register Hive adapters (done in the code automatically).
+Add the hive and hive_flutter dependencies to your pubspec.yaml file.<br>
+Register Hive adapters (done in the code automatically).<br><br>
 
-#Step 4: Run the App
-To run the app, make sure you have an emulator or a connected device. Then, execute the following command:
+**Step 4: Run the App** <br>
+To run the app, make sure you have an emulator or a connected device. Then, execute the following command:<br><br>
 
-flutter run
-This will compile and launch the app on your chosen device or simulator.
+flutter run<br>
+This will compile and launch the app on your chosen device or simulator.<br>
 
