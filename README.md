@@ -53,7 +53,7 @@ This will compile and launch the app on your chosen device or simulator.<br><br>
 Error: HiveAdapter not defined<br>
 If you encounter the error about TaskAdapter being undefined, ensure you've run the build runner command to generate the necessary Hive adapter code:<br><br>
 
-flutter packages pub run build_runner build<br>
+>flutter packages pub run build_runner build<br>
 This will generate the required .g.dart files for Hive.<br><br>
 
 Error: NoSuchMethodError on copyWith<br>
