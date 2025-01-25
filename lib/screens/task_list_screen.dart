@@ -157,7 +157,7 @@ class _TaskListScreenState extends ConsumerState<TaskListScreen> {
           );
         },
         trailing: IconButton(
-          icon: Icon(Icons.delete, color: Colors.red),
+          icon: const Icon(Icons.delete, color: Colors.red),
           onPressed: () {
             ref.read(tasksProvider.notifier).deleteTask(
               ref.watch(tasksProvider).indexOf(task),
